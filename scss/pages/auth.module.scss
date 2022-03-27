@@ -1,0 +1,76 @@
+@use "../variables" as v;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 5.6rem);
+
+  .logInContainer {
+    width: 100%;
+    max-width: 40rem;
+    padding: 4rem;
+    border-radius: 1rem;
+
+    .logoWrapper {
+      display: flex;
+      margin-bottom: 2rem;
+
+      .logoName {
+        margin-left: 1rem;
+        color: map-get(v.$colors, quaternary);
+        font-weight: map-get(v.$weights, light);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+    }
+
+    .message {
+      color: #a0a0a0;
+      font-size: 1.3rem;
+      margin-bottom: 4rem;
+    }
+
+    .logInBtnsContainer {
+      display: grid;
+      gap: 2rem;
+
+      .logInBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 6rem;
+        padding: 0 2rem;
+        font-size: 1.6rem;
+        color: map-get(v.$colors, primary);
+        background-color: transparent;
+        font-weight: map-get(v.$weights, medium);
+        border: 1px solid map-get(v.$colors, tertiary);
+        border-radius: 1rem;
+
+        &:active {
+          opacity: 50%;
+        }
+
+        .logInBtnIcon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.5rem;
+          margin-right: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: 100vh;
+
+    .logInContainer {
+      border: 1px solid map-get(v.$colors, tertiary);
+    }
+  }
+}

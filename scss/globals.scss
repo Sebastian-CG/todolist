@@ -1,0 +1,24 @@
+@use "./variables" as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: map-get(v.$fonts, primary);
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color-scheme: light dark;
+}
+
+body {
+  color: map-get(v.$colors, primary);
+  background-color: map-get(v.$colors, secondary);
+}
+
+button {
+  cursor: pointer;
+}
